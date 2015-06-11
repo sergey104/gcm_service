@@ -1,6 +1,6 @@
 require 'sinatra/activerecord/rake'
 require 'sinatra/activerecord'
-require 'pg'
+require 'mysql2'
 
 class MobileUser < ActiveRecord::Base
 end

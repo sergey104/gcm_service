@@ -1,49 +1,34 @@
+# Default setup is given for MySQL with ruby1.9.
+# Examples for PostgreSQL, SQLite3 and SQL Server can be found at the end.
+# Line indentation must be 2 spaces (no tabs).
+
+
+production:
+  adapter: mysql2
+  database: gcm
+  host: localhost
+  username: root
+  password: "Remcolor777"
+  encoding: utf8
+  socket: /tmp/mysql.sock
+
 development:
-adapter: postgresql
-encoding: unicode
-database: mydb
-pool: 5
-username: fil
-password: postgres
-
-#development:
-#adapter: postgresql
-#encoding: unicode
-#database: inbound_sms_local
-#pool: 5
-#username: fil
-#password: pass
-
-# Connect on a TCP socket. Omitted by default since the client uses a
-# domain socket that doesn't need configuration. Windows does not have
-# domain sockets, so uncomment these lines.
-#host: localhost
-#port: 5432
-
-# Schema search path. The server defaults to $user,public
-#schema_search_path: myapp,sharedapp,public
-
-# Minimum log levels, in increasing order:
-# debug5, debug4, debug3, debug2, debug1,
-# log, notice, warning, error, fatal, and panic
-# The server defaults to notice.
-#min_messages: warning
+  adapter: mysql2
+  database: gcm_development
+  host: localhost
+  username: root
+  password: "Remcolor777"
+  encoding: utf8
+  socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-adapter: postgresql
-encoding: unicode
-database: mydb
-pool: 5
-username: fil
-password: postgres
-
-production:
-adapter: postgresql
-encoding: unicode
-database: mydb
-pool: 5
-username: fil
-password: postgres
+  adapter: mysql2
+  database: gcm_test
+  host: localhost
+  username: root
+  password: "Remcolor777"
+  encoding: utf8
+  socket: /tmp/mysql.sock
