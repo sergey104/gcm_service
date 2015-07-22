@@ -27,7 +27,6 @@ GEM
     minitest (5.6.1)
     multi_xml (0.5.5)
     mysql2 (0.3.18)
-    pg (0.18.1)
     rack (1.6.1)
     rack-protection (1.5.3)
       rack
@@ -54,12 +53,10 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
-  activerecord-jdbcmysql-adapter
   gcm
   json
   minitest
-  mysql2 (~> 0.3.11)
-  pg
+  mysql2
   rake
   redis
   redis-namespace
