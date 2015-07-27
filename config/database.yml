@@ -10,16 +10,16 @@ production:
   username: root
   password: "Remcolor777"
   encoding: utf8
-  socket: /tmp/mysql.sock
+  socket: /var/lib/mysql/mysql.sock
 
 development:
   adapter: mysql2
-  database: gcm_development
+  database: gcm-development
   host: localhost
   username: root
   password: "Remcolor777"
   encoding: utf8
-  socket: /tmp/mysql.sock
+  socket: /var/lib/mysql/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -31,4 +31,4 @@ test:
   username: root
   password: "Remcolor777"
   encoding: utf8
-  socket: /tmp/mysql.sock
+  socket: /var/lib/mysql/mysql.sock
