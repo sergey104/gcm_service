@@ -5,6 +5,7 @@ require 'mysql2'
 # config/environments.rb
 # development
 configure :development do
+  db = URI.parse(ENV['DATABASE_URL'] || 'mysql2:///localhost/gcm_development')
   pool= 5
   username = root
   password =Remcolor777
@@ -13,9 +14,9 @@ configure :development do
           :host     => 'localhost',
           :username => 'root',
           :password => 'Remcolor777',
-          :database => 'gsm-development',
+          :database => 'gcm_development',
           :encoding => 'utf8',
-          :socket   =>  '/var/lib/mysql/mysql.sock'
+          :socket   =>  '/tmp/mysql.sock'
   )
 end
 
@@ -30,8 +31,8 @@ configure :production do
       :host     => 'localhost',
       :username => 'root',
       :password => 'Remcolor777',
-      :database => 'gsm',
+      :database => 'gcm',
       :encoding => 'utf8',
-      :socket   =>  '/var/lib/mysql/mysql.sock'
+      :socket   =>  '/tmp/mysql.sock'
   )
 end
