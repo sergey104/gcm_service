@@ -2,13 +2,17 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require 'constants'
-require 'redis'
-require 'redis-namespace'
-require 'redis-objects'
 require 'json'
 require 'gcm'
 require 'thread'
+require 'rubygems'
+require 'active_record'
 
+ActiveRecord::Base.establish_connection(
+    :adapter => "mysql",
+    :host => "localhost",
+    :database => "gcm"
+)
 
 class AndroidUser
   def user_id
@@ -30,12 +34,14 @@ class Message
   end
 end
 
-class MyRedis < Redis
-  @redis
+class MySQL < ActiveRecord::Base
+end
+
+class SQL
 
   def initialize
     @lock = Mutex.new
-    @redis = Redis.new(host: HOST, port: PORT, db:0)
+
   end
 
   def send_message_to_all_users
