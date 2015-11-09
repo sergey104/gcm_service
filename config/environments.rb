@@ -16,7 +16,7 @@ configure :development do
           :password => 'Remcolor777',
           :database => 'gcm_development',
           :encoding => 'utf8',
-          :socket   =>  '/tmp/mysql.sock'
+          :socket   =>  '/var/lib/mysql/mysql.sock'
   )
 end
 
@@ -33,6 +33,6 @@ configure :production do
       :password => 'Remcolor777',
       :database => 'gcm',
       :encoding => 'utf8',
-      :socket   =>  '/tmp/mysql.sock'
+      :socket   =>  '/var/lib/mysql/mysql.sock'
   )
 end
